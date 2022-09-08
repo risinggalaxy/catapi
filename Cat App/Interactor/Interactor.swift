@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class Interactor: InteractorInterface {
+    var presenter: PresenterInterface?
+    var networkService: NetworkServiceInterface?
+}

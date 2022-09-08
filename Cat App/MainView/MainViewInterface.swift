@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol MainViewInterface {
+    var presenter: PresenterInterface? { get set }
+}

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class Presenter: PresenterInterface {
+    var view: MainViewInterface?
+    var interactor: InteractorInterface?
+    var wireframe: WireframeInterface?
+    var networkService: NetworkServiceInterface?
+}

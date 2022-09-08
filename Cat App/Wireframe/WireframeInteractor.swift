@@ -5,4 +5,12 @@
 //  Created by YASSER FARAHI on 08/09/2022.
 //
 
-import Foundation
+import UIKit
+
+typealias VIEW = UIViewController
+
+protocol WireframeInterface {
+    
+    static func createInitialView() -> VIEW
+    
+}

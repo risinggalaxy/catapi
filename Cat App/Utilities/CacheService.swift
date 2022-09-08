@@ -13,7 +13,7 @@ enum Directory {
 
 class CacheService {
     
-    init(){}
+    private init(){}
     
     public static func getURL(for directory: Directory) -> URL {
         let searchDirectory: FileManager.SearchPathDirectory
@@ -27,6 +27,7 @@ class CacheService {
         return url
     }
     
+    //Clears caches files/images
     public static func clear(directory: Directory) {
         let directoryUrl = getURL(for: directory)
         do {
@@ -39,6 +40,7 @@ class CacheService {
         }
     }
     
+    //Saves new images
     public static func saveImage(fileName: String, imageData: Data, in directory: Directory) {
         let directoryUrl = getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
         let filePath = directoryUrl.path
@@ -47,7 +49,7 @@ class CacheService {
         }
     }
     
-    
+    //Checks whether image already exists
     public static func imageExists(fileName: String, in directory: Directory) -> (available: Bool, fileURL: URL, imageData: Data?) {
         let fileURL = getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
         let imageData = FileManager.default.contents(atPath: fileURL.path)

@@ -160,8 +160,8 @@
 		73DD67BD28CA13DC00F63547 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				73DD67F728CA151100F63547 /* NtworkService.swift */,
 				73DD67F928CA152300F63547 /* NetworkSerivceInterface.swift */,
+				73DD67F728CA151100F63547 /* NtworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";

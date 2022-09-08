@@ -5,4 +5,15 @@
 //  Created by YASSER FARAHI on 08/09/2022.
 //
 
-import Foundation
+import UIKit
+
+class MainView: VIEW, MainViewInterface {
+    
+    var presenter: PresenterInterface?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .blue
+    }
+    
+}

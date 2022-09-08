@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol PresenterInterface {
+    var view: MainViewInterface? { get set }
+    var interactor: InteractorInterface? { get set }
+    var wireframe: WireframeInterface? { get set }
+    var networkService: NetworkServiceInterface? { get set }
+}
