@@ -8,4 +8,8 @@
 import Foundation
 
 protocol NetworkServiceInterface {
+    var urlSession: URLSession { get set }
+    var url: String { get set }
+    init(urlSession: URLSession, url: String)
+    func downloader(completionHandler: @escaping (Data?, ErrorHandler?) -> Void )
 }

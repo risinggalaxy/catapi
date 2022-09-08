@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct CatModel: Codable {
+    let id, name, origin: String
+    let image: ImageModel
+}
+
+struct ImageModel: Codable { let url: String }
+

@@ -27,6 +27,16 @@
 		73DD680028CA155200F63547 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD67FF28CA155200F63547 /* ErrorHandler.swift */; };
 		73DD680228CA156300F63547 /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680128CA156300F63547 /* UIViewAutoLayoutExtension.swift */; };
 		73DD680428CA159600F63547 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680328CA159600F63547 /* CacheService.swift */; };
+		73DD680628CA19DA00F63547 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680528CA19DA00F63547 /* TestModel.swift */; };
+		73DD680828CA1A1A00F63547 /* MockCatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680728CA1A1A00F63547 /* MockCatModel.swift */; };
+		73DD680A28CA1A5A00F63547 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680928CA1A5A00F63547 /* TestPresenter.swift */; };
+		73DD680C28CA1A6E00F63547 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680B28CA1A6E00F63547 /* MockPresenter.swift */; };
+		73DD680E28CA1A7600F63547 /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680D28CA1A7600F63547 /* MockInteractor.swift */; };
+		73DD681028CA1A8000F63547 /* MockWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD680F28CA1A8000F63547 /* MockWireFrame.swift */; };
+		73DD681228CA1AB900F63547 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681128CA1AB900F63547 /* MockURLProtocol.swift */; };
+		73DD681428CA1ACE00F63547 /* MockJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681328CA1ACE00F63547 /* MockJSON.swift */; };
+		73DD681628CA1AEC00F63547 /* TestNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681528CA1AEC00F63547 /* TestNetworkService.swift */; };
+		73DD681828CA1B0700F63547 /* TestAPIURLScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681728CA1B0700F63547 /* TestAPIURLScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +81,16 @@
 		73DD67FF28CA155200F63547 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		73DD680128CA156300F63547 /* UIViewAutoLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtension.swift; sourceTree = "<group>"; };
 		73DD680328CA159600F63547 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		73DD680528CA19DA00F63547 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		73DD680728CA1A1A00F63547 /* MockCatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCatModel.swift; sourceTree = "<group>"; };
+		73DD680928CA1A5A00F63547 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		73DD680B28CA1A6E00F63547 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
+		73DD680D28CA1A7600F63547 /* MockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
+		73DD680F28CA1A8000F63547 /* MockWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWireFrame.swift; sourceTree = "<group>"; };
+		73DD681128CA1AB900F63547 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		73DD681328CA1ACE00F63547 /* MockJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSON.swift; sourceTree = "<group>"; };
+		73DD681528CA1AEC00F63547 /* TestNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkService.swift; sourceTree = "<group>"; };
+		73DD681728CA1B0700F63547 /* TestAPIURLScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIURLScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +253,10 @@
 		73DD67DF28CA144400F63547 /* TestNetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				73DD681128CA1AB900F63547 /* MockURLProtocol.swift */,
+				73DD681328CA1ACE00F63547 /* MockJSON.swift */,
+				73DD681528CA1AEC00F63547 /* TestNetworkService.swift */,
+				73DD681728CA1B0700F63547 /* TestAPIURLScheme.swift */,
 			);
 			path = TestNetworkService;
 			sourceTree = "<group>";
@@ -254,6 +278,10 @@
 		73DD67E228CA146200F63547 /* TestPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				73DD680928CA1A5A00F63547 /* TestPresenter.swift */,
+				73DD680B28CA1A6E00F63547 /* MockPresenter.swift */,
+				73DD680D28CA1A7600F63547 /* MockInteractor.swift */,
+				73DD680F28CA1A8000F63547 /* MockWireFrame.swift */,
 			);
 			path = TestPresenter;
 			sourceTree = "<group>";
@@ -261,6 +289,8 @@
 		73DD67E328CA147600F63547 /* TestModel */ = {
 			isa = PBXGroup;
 			children = (
+				73DD680528CA19DA00F63547 /* TestModel.swift */,
+				73DD680728CA1A1A00F63547 /* MockCatModel.swift */,
 			);
 			path = TestModel;
 			sourceTree = "<group>";
@@ -343,6 +373,7 @@
 					};
 					73DD67C628CA142600F63547 = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 						TestTargetID = 73DD67A328CA124400F63547;
 					};
 					73DD67D328CA143300F63547 = {
@@ -427,6 +458,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DD681228CA1AB900F63547 /* MockURLProtocol.swift in Sources */,
+				73DD680E28CA1A7600F63547 /* MockInteractor.swift in Sources */,
+				73DD681628CA1AEC00F63547 /* TestNetworkService.swift in Sources */,
+				73DD680C28CA1A6E00F63547 /* MockPresenter.swift in Sources */,
+				73DD681028CA1A8000F63547 /* MockWireFrame.swift in Sources */,
+				73DD680828CA1A1A00F63547 /* MockCatModel.swift in Sources */,
+				73DD681428CA1ACE00F63547 /* MockJSON.swift in Sources */,
+				73DD680628CA19DA00F63547 /* TestModel.swift in Sources */,
+				73DD680A28CA1A5A00F63547 /* TestPresenter.swift in Sources */,
+				73DD681828CA1B0700F63547 /* TestAPIURLScheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,14 +679,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UU5J2SPKHT;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.risinggalaxy.CatAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cat App.app/Cat App";
@@ -656,10 +704,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UU5J2SPKHT;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.risinggalaxy.CatAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
