@@ -58,8 +58,26 @@ class TestPresenter: XCTestCase {
         configuration.protocolClasses = [MockURLProtocol.self]
         MockURLProtocol.stubData = imageData
         let urlSession = URLSession(configuration: configuration)
-        sut.imageForCell(with: "dummyCatImage", name: "dummyCatImage", urlSession: urlSession) { receivedData in
+        sut.imageForCell(with: "dummyCatImage", name: "dummyCatImage", urlSession: urlSession) { (receivedData, error) in
             XCTAssertEqual(receivedData, imageData)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func testPresenter_ImageForCell_ShouldTriggerErrorOnMainView() {
+        let expectation = XCTestExpectation(description: "Data Failed")
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [MockURLProtocol.self]
+        MockURLProtocol.error = .cachedImageDatWasCorrupt
+        let urlSession = URLSession(configuration: configuration)
+        sut.imageForCell(with: "", name: "", urlSession: urlSession) { [weak self] (_, error) in
+            guard let strongSelf = self else { return }
+            XCTAssertEqual(error, .cachedImageDatWasCorrupt)
+            XCTAssertTrue(strongSelf.mockMainView.didUpdateNotifierLabelWithError)
+            XCTAssertEqual(strongSelf.mockMainView.timesDidUpdateNotifierLabel, 1)
+            XCTAssertEqual(strongSelf.mockMainView.errorType, .cachedImageDatWasCorrupt)
+            
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 2.0)

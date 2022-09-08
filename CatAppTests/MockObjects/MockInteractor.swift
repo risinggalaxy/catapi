@@ -9,14 +9,9 @@ import Foundation
 @testable import Cat_App
 
 class MockInteractor: InteractorInterface {
-    
-   
-    
     var presenter: PresenterInterface?
-    
     var didSetNetworkService: Bool = false
     var timesDidSetNetworkService: Int = 0
-    
     var didReturnCatObjectForIndex: Bool = false
     var timesReturnedCatObjectsForIndex: Int = 0
     

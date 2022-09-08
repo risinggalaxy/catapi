@@ -29,9 +29,10 @@ class MockPresenter: PresenterInterface {
     func updateView(_ error: ErrorHandler) {
         didUpdateViewWithError = true
         timesDidUpdateViewWithError += 1
+        view?.updateViewWhen(error)
     }
     
-    func imageForCell(with url: String?, name: String, urlSession: URLSession, completion: @escaping (Data) -> Void) {
+    func imageForCell(with url: String?, name: String, urlSession: URLSession, completion: @escaping (Data?, ErrorHandler?) -> Void) {
         didCallImageForCell = true
         timesDidCallImageForCell += 1
     }

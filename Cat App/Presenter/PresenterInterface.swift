@@ -15,5 +15,5 @@ protocol PresenterInterface {
     var numberOfObjects: Int? { get set }
     func objectFor(index: Int) -> CatModel?
     func updateView( _ error: ErrorHandler)
-    func imageForCell(with url: String?, name: String,  urlSession: URLSession, completion: @escaping (Data) -> Void )
+    func imageForCell(with url: String?, name: String,  urlSession: URLSession, completion: @escaping (Data?, ErrorHandler?) -> Void )
 }

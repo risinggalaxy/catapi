@@ -12,15 +12,10 @@ class TestInteractor: XCTestCase {
     
     var sut: Interactor!
     var mockPresenter: MockPresenter!
-    var mockNetworkService: MockNetworkService!
     
     override func setUp() {
         super.setUp()
         sut = Interactor()
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [MockURLProtocol.self]
-        let session = URLSession(configuration: configuration)
-        mockNetworkService = MockNetworkService(urlSession:session, url: "")
         mockPresenter = MockPresenter()
         
     }
@@ -28,8 +23,17 @@ class TestInteractor: XCTestCase {
     override func tearDown() {
         sut = nil
         mockPresenter = nil
-        mockNetworkService = nil
         super.tearDown()
+    }
+    
+    func testInteractor_WhenNetworkServiceIsSet_ShouldTriggerDownloaderMethod() {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [MockURLProtocol.self]
+        let session = URLSession(configuration: configuration)
+        let mockNetworkService = MockNetworkService(urlSession:session, url: "")
+        sut.networkService = mockNetworkService
+        XCTAssertTrue(mockNetworkService.didCallDownloader)
+        XCTAssertEqual(mockNetworkService.timesDidCallDownloader, 1)
     }
     
     func testInteractor_WhenPresenterWantsNewObject_ShouldProvideObjectForIndex() {

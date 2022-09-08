@@ -10,7 +10,5 @@ import UIKit
 typealias VIEW = UIViewController
 
 protocol WireframeInterface {
-    
     static func createInitialView() -> VIEW
-    
 }

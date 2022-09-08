@@ -9,11 +9,9 @@ import UIKit
 @testable import Cat_App
 
 class MockMainView: MainViewInterface {
-    
     var collectionView: UICollectionView!
     var notifierLabel: UILabel!
     var presenter: PresenterInterface?
-    
     var didUpdateNotifierLabelWithError: Bool =  false
     var timesDidUpdateNotifierLabel: Int = 0
     var errorType: ErrorHandler = .noValidImageUrl

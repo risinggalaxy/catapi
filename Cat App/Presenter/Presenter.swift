@@ -35,18 +35,20 @@ class Presenter: PresenterInterface {
         view?.updateViewWhen(error)
     }
     
-    func imageForCell(with url: String?, name: String, urlSession: URLSession, completion: @escaping (Data) -> Void) {
+    func imageForCell(with url: String?, name: String, urlSession: URLSession, completion: @escaping (Data?, ErrorHandler?) -> Void) {
         guard let imageUrl = url else {
             updateView(.noValidImageUrl)
+            completion(nil, .noValidImageUrl)
             return
         }
         if CacheService.imageExists(fileName: name, in: .cache).available {
             guard let cacheImage = CacheService.imageExists(fileName: name, in: .cache).imageData else {
                 updateView(.cachedImageDatWasCorrupt)
+                completion(nil, .cachedImageDatWasCorrupt)
                 return
             }
             //Sending cached image to the collection view cell, instead of downloading it again, saving resources
-            completion(cacheImage)
+            completion(cacheImage, nil)
             //Otherwise we are going to download the image and store it in cache folder
         } else {
             networkService = NetworkService(urlSession: urlSession ,url: imageUrl)
@@ -54,16 +56,16 @@ class Presenter: PresenterInterface {
                 guard let strongSelf = self else { return }
                 if let err = error {
                     strongSelf.updateView(err)
+                    completion(nil, err)
                 }
                 
                 //Downloading imageData and saving it in cache folder for reuse
                 if let imageData = data {
                     CacheService.saveImage(fileName: name, imageData: imageData, in: .cache)
-                    completion(imageData)
+                    completion(imageData, nil)
                 }
             })
         }
     }
-    
     
 }

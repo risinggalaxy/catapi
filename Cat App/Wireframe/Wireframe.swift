@@ -14,14 +14,13 @@ class Wireframe: WireframeInterface {
         let interactor = Interactor()
         let presenter = Presenter()
         let wireframe = Wireframe()
-        
         mainView.presenter = presenter
         interactor.presenter = presenter
         presenter.interactor = interactor
         presenter.view = mainView
         presenter.wireframe = wireframe
+        interactor.networkService = NetworkService(url: APIURL.getURL())
         mainView.title = "Home"
-        
         return mainView
     }
     
