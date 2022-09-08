@@ -10,4 +10,6 @@ import Foundation
 protocol InteractorInterface {
     var presenter: PresenterInterface? { get set }
     var networkService: NetworkServiceInterface? { get set }
+    var catObjects: [CatModel]? { get set }
+    func objectFor(_ index: Int) -> CatModel?
 }

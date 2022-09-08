@@ -12,4 +12,8 @@ protocol PresenterInterface {
     var interactor: InteractorInterface? { get set }
     var wireframe: WireframeInterface? { get set }
     var networkService: NetworkServiceInterface? { get set }
+    var numberOfObjects: Int? { get set }
+    func objectFor(index: Int) -> CatModel?
+    func updateView( _ error: ErrorHandler)
+    func imageForCell(with url: String?, name: String,  urlSession: URLSession, completion: @escaping (Data) -> Void )
 }

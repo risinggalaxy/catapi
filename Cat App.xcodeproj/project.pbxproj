@@ -37,6 +37,11 @@
 		73DD681428CA1ACE00F63547 /* MockJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681328CA1ACE00F63547 /* MockJSON.swift */; };
 		73DD681628CA1AEC00F63547 /* TestNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681528CA1AEC00F63547 /* TestNetworkService.swift */; };
 		73DD681828CA1B0700F63547 /* TestAPIURLScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681728CA1B0700F63547 /* TestAPIURLScheme.swift */; };
+		73DD681A28CA241300F63547 /* MockMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681928CA241300F63547 /* MockMainView.swift */; };
+		73DD681E28CA25A000F63547 /* MockCatObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681D28CA25A000F63547 /* MockCatObjects.swift */; };
+		73DD682028CA281100F63547 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD681F28CA281100F63547 /* TestInteractor.swift */; };
+		73DD682228CA281E00F63547 /* TestMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD682128CA281E00F63547 /* TestMainView.swift */; };
+		73DD682428CA290F00F63547 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD682328CA290F00F63547 /* MockNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +96,11 @@
 		73DD681328CA1ACE00F63547 /* MockJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSON.swift; sourceTree = "<group>"; };
 		73DD681528CA1AEC00F63547 /* TestNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkService.swift; sourceTree = "<group>"; };
 		73DD681728CA1B0700F63547 /* TestAPIURLScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIURLScheme.swift; sourceTree = "<group>"; };
+		73DD681928CA241300F63547 /* MockMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainView.swift; sourceTree = "<group>"; };
+		73DD681D28CA25A000F63547 /* MockCatObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCatObjects.swift; sourceTree = "<group>"; };
+		73DD681F28CA281100F63547 /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
+		73DD682128CA281E00F63547 /* TestMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainView.swift; sourceTree = "<group>"; };
+		73DD682328CA290F00F63547 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +267,7 @@
 				73DD681328CA1ACE00F63547 /* MockJSON.swift */,
 				73DD681528CA1AEC00F63547 /* TestNetworkService.swift */,
 				73DD681728CA1B0700F63547 /* TestAPIURLScheme.swift */,
+				73DD682328CA290F00F63547 /* MockNetworkService.swift */,
 			);
 			path = TestNetworkService;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 		73DD67E028CA145000F63547 /* TestMainView */ = {
 			isa = PBXGroup;
 			children = (
+				73DD682128CA281E00F63547 /* TestMainView.swift */,
 			);
 			path = TestMainView;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 		73DD67E128CA145900F63547 /* TestInteractor */ = {
 			isa = PBXGroup;
 			children = (
+				73DD681F28CA281100F63547 /* TestInteractor.swift */,
 			);
 			path = TestInteractor;
 			sourceTree = "<group>";
@@ -282,6 +295,8 @@
 				73DD680B28CA1A6E00F63547 /* MockPresenter.swift */,
 				73DD680D28CA1A7600F63547 /* MockInteractor.swift */,
 				73DD680F28CA1A8000F63547 /* MockWireFrame.swift */,
+				73DD681928CA241300F63547 /* MockMainView.swift */,
+				73DD681D28CA25A000F63547 /* MockCatObjects.swift */,
 			);
 			path = TestPresenter;
 			sourceTree = "<group>";
@@ -462,10 +477,15 @@
 				73DD680E28CA1A7600F63547 /* MockInteractor.swift in Sources */,
 				73DD681628CA1AEC00F63547 /* TestNetworkService.swift in Sources */,
 				73DD680C28CA1A6E00F63547 /* MockPresenter.swift in Sources */,
+				73DD681A28CA241300F63547 /* MockMainView.swift in Sources */,
+				73DD682228CA281E00F63547 /* TestMainView.swift in Sources */,
 				73DD681028CA1A8000F63547 /* MockWireFrame.swift in Sources */,
 				73DD680828CA1A1A00F63547 /* MockCatModel.swift in Sources */,
+				73DD681E28CA25A000F63547 /* MockCatObjects.swift in Sources */,
 				73DD681428CA1ACE00F63547 /* MockJSON.swift in Sources */,
+				73DD682028CA281100F63547 /* TestInteractor.swift in Sources */,
 				73DD680628CA19DA00F63547 /* TestModel.swift in Sources */,
+				73DD682428CA290F00F63547 /* MockNetworkService.swift in Sources */,
 				73DD680A28CA1A5A00F63547 /* TestPresenter.swift in Sources */,
 				73DD681828CA1B0700F63547 /* TestAPIURLScheme.swift in Sources */,
 			);

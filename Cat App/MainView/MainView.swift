@@ -10,10 +10,17 @@ import UIKit
 class MainView: VIEW, MainViewInterface {
     
     var presenter: PresenterInterface?
+    var collectionView: UICollectionView!
+    var notifierLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
+    }
+    
+    
+    func updateViewWhen(_ error: ErrorHandler) {
+        //TODO: UPDATE notifierLabel
     }
     
 }
