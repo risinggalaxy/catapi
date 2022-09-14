@@ -4,6 +4,8 @@ workflows:
     scripts:
       - name: Initialising CI/CD
         script: echo 'Starting CI/CD'
+      - name: Build Cat App
+        script: xcodebuild build -workspace "CatApp.xcodeproj" -scheme "Cat App" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
       email:
         recipients:
