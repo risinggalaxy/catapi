@@ -1,7 +1,11 @@
 workflows:
-  Adding CI/CD:
-    name: Starting CI/CD on codemagic
+  catapp-workflow:
+    name: Cat App Pipeline
     scripts:
-        - echo "Let there be CI/CD"
-
+	- name: CICD Initialised
+        - script: "Let there be CI/CD"
+    publishing:
+      email:
+	recipients:
+	  - yfarahi@risinggalaxy.com
 
