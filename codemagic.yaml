@@ -2,10 +2,9 @@ workflows:
   catapp-workflow:
     name: Cat App Pipeline
     scripts:
-	- name: CICD Initialised
-        - script: "Let there be CI/CD"
+      - name: Initialising CI/CD
+        script: echo 'Starting CI/CD'
     publishing:
       email:
-	recipients:
-	  - yfarahi@risinggalaxy.com
-
+        recipients:
+          - yfarahi@risinggalaxy.com
