@@ -6,6 +6,13 @@ workflows:
         script: echo 'Starting CI/CD'
       - name: Build Cat App
         script: xcodebuild build -workspace "CatApp.xcworkspace" -scheme "Cat App" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      - name: iOS UnitTests
+        script: |
+          xcode-project run-tests \
+              --workspace CatApp.xcworkspace \
+              --scheme CatApp \
+              --device "iPhone 11"
+        test_report: build/ios/test/*.xml
     publishing:
       email:
         recipients:
