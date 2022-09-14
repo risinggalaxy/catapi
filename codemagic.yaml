@@ -1,5 +1,7 @@
 workflows:
-  hello-world:
+  Adding CI/CD:
     name: Starting CI/CD on codemagic
     scripts:
         - echo "Let there be CI/CD"
+
+
