@@ -12,7 +12,7 @@ workflows:
               --workspace CatApp.xcworkspace \
               --scheme CatApp \
               --device "iPhone 11"
-        test_report: build/ios/test/*.xml
+        test_report: CatAppTests/*.xml
     publishing:
       email:
         recipients:
